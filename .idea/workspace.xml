@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4f15877-becd-4bcd-9813-455b54cf00f6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/todolist.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="d4f15877-becd-4bcd-9813-455b54cf00f6" name="Changes" comment="Create Ui to ask user for task, dates, owner" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,67 +13,73 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/EdgarKorsin-cloud/TODOList",
+    "accountId": "14f39a96-5d3f-4d7b-9b24-edc0bbdcd233"
+  }
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="4.2073390419586465E-43" />
-      <entry key="MS500" value="3.348123753856975E-9" />
-      <entry key="S2" value="0.007606771584965605" />
-      <entry key="S5" value="0.14206272804187786" />
-      <entry key="S10" value="0.37691209590815455" />
-      <entry key="S30" value="0.7223483609822038" />
-      <entry key="S60" value="0.8499164596660564" />
-      <entry key="M2" value="0.9297185139562931" />
-      <entry key="M5" value="2.4128701884685557" />
-      <entry key="M10" value="12.582509064504562" />
-      <entry key="M15" value="25.119311996272668" />
-      <entry key="M30" value="52.0862419570207" />
-      <entry key="H1" value="75.81200911408399" />
-      <entry key="H2" value="91.67026274560233" />
-      <entry key="H4" value="100.85613681268075" />
-      <entry key="D1" value="109.23861264289415" />
-      <entry key="W1" value="110.74658289610483" />
+      <entry key="MS100" value="1.0111277719221565" />
+      <entry key="MS500" value="1.5100621393886628" />
+      <entry key="S2" value="2.939586915817426" />
+      <entry key="S5" value="4.449951535678968" />
+      <entry key="S10" value="6.350240202959101" />
+      <entry key="S30" value="11.525874746214168" />
+      <entry key="S60" value="16.54532190174193" />
+      <entry key="M2" value="22.342653228525815" />
+      <entry key="M5" value="29.603677525223844" />
+      <entry key="M10" value="40.11779821943938" />
+      <entry key="M15" value="52.18515273222535" />
+      <entry key="M30" value="79.8007435366736" />
+      <entry key="H1" value="105.65647148026213" />
+      <entry key="H2" value="123.57678758189273" />
+      <entry key="H4" value="134.15848047011576" />
+      <entry key="D1" value="143.93256663654944" />
+      <entry key="W1" value="145.70226624049764" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.000000045994506" />
-      <entry key="S2" value="1.0158406712897776" />
-      <entry key="S5" value="1.2787072383824212" />
-      <entry key="S10" value="1.8560237488100775" />
-      <entry key="S30" value="2.9446007669583185" />
-      <entry key="S60" value="3.410631111130686" />
-      <entry key="M2" value="3.687914637066031" />
-      <entry key="M5" value="3.8707048605528236" />
-      <entry key="M10" value="3.934583778469708" />
-      <entry key="M15" value="3.9562164576808083" />
-      <entry key="M30" value="3.9780213804909272" />
-      <entry key="H1" value="3.988988886841959" />
-      <entry key="H2" value="3.994488981111849" />
-      <entry key="H4" value="3.9972431235436168" />
-      <entry key="D1" value="3.9995403306058552" />
-      <entry key="W1" value="3.999934328289415" />
+      <entry key="MS100" value="6.35880697679427E-212" />
+      <entry key="MS500" value="5.7633517775717E-43" />
+      <entry key="S2" value="2.755299301459202E-11" />
+      <entry key="S5" value="5.971281053585883E-5" />
+      <entry key="S10" value="0.00772740694452253" />
+      <entry key="S30" value="0.19958921078499336" />
+      <entry key="S60" value="0.5309789717487887" />
+      <entry key="M2" value="1.2535898649692865" />
+      <entry key="M5" value="2.7058845064418775" />
+      <entry key="M10" value="3.646338550911306" />
+      <entry key="M15" value="4.0436732728381735" />
+      <entry key="M30" value="4.492567263966963" />
+      <entry key="H1" value="4.738494262370013" />
+      <entry key="H2" value="4.867237425919078" />
+      <entry key="H4" value="4.933108271067795" />
+      <entry key="D1" value="4.988779792974726" />
+      <entry key="W1" value="4.998395351087037" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.7527745895340508E-5" />
-      <entry key="MS500" value="0.11187813927194869" />
-      <entry key="S2" value="0.5933914237137845" />
-      <entry key="S5" value="1.15502339351703" />
-      <entry key="S10" value="2.0171603095225614" />
-      <entry key="S30" value="3.5421800002440693" />
-      <entry key="S60" value="4.186593211291941" />
-      <entry key="M2" value="4.57713628550799" />
-      <entry key="M5" value="6.264644737922474" />
-      <entry key="M10" value="16.50263899191194" />
-      <entry key="M15" value="29.062221330319428" />
-      <entry key="M30" value="56.05383143234947" />
-      <entry key="H1" value="79.79415744716884" />
-      <entry key="H2" value="95.6607935011253" />
-      <entry key="H4" value="104.85124565567655" />
-      <entry key="D1" value="113.237773715587" />
-      <entry key="W1" value="114.74646244032637" />
+      <entry key="MS100" value="0.9627367716925322" />
+      <entry key="MS500" value="1.49162576154313" />
+      <entry key="S2" value="2.930607964205023" />
+      <entry key="S5" value="4.44469657297065" />
+      <entry key="S10" value="6.352077012363495" />
+      <entry key="S30" value="11.69609183331221" />
+      <entry key="S60" value="17.03260143133485" />
+      <entry key="M2" value="23.549158883517393" />
+      <entry key="M5" value="32.2745420747555" />
+      <entry key="M10" value="43.738772513155226" />
+      <entry key="M15" value="56.207565390077264" />
+      <entry key="M30" value="84.27833273528238" />
+      <entry key="H1" value="110.38557105653332" />
+      <entry key="H2" value="128.4386837742659" />
+      <entry key="H4" value="139.08873009030347" />
+      <entry key="D1" value="148.9208412191079" />
+      <entry key="W1" value="150.70058867685472" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -127,14 +126,27 @@
       <option name="presentableId" value="Default" />
       <updated>1789577749279</updated>
       <workItem from="1789577750318" duration="242000" />
-      <workItem from="1789753928630" duration="2264000" />
+      <workItem from="1789753928630" duration="2692000" />
     </task>
+    <task id="LOCAL-00001" summary="Create Ui to ask user for task, dates, owner">
+      <option name="closed" value="true" />
+      <created>1789756966993</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1789756966993</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create Ui to ask user for task, dates, owner" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Ui to ask user for task, dates, owner" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/todolist$main.coverage" NAME="main Coverage Results" MODIFIED="1789756549294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/todolist$main.coverage" NAME="main Coverage Results" MODIFIED="1789756687934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
