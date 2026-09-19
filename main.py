@@ -65,15 +65,44 @@ def populating_task_list():
     Session = sessionmaker(bind=engine)
     session = Session()
     all_tasks = session.query(Task).all()
-    display_text = ""
-    for task in all_tasks:
-        display_text += f"ID: {task.id} | {task.task_description}\n"
-        display_text += f"Schedule: {task.task_start} to {task.task_end}\n"
-        display_text += f"Owner: {task.owner_name} ({task.owner_email})\n"
-        display_text += "-" * 40 + "\n"
-
+    for index,task in enumerate(all_tasks):
+        task_frame = tk.Frame(todo_frame)
+        task_frame.grid(row=index,column=0,sticky="ew", pady=2)
+        task_frame.columnconfigure(0, weight=1)
+        task_text = (
+            f"ID: {task.id} | {task.task_description}\n"
+            f"Schedule: {task.task_start} to {task.task_end}\n"
+            f"Owner: {task.owner_name} ({task.owner_email})"
+        )
+        check_var = tk.BooleanVar()
+        chk = tk.Checkbutton(
+            task_frame,
+            text=task_text,
+            variable=check_var,
+            justify="left",
+            command=lambda tf=task_frame, cv=check_var: toggle_task_location(tf, cv)
+        )
+        chk.grid(sticky="w")
+        divider = tk.Frame(task_frame, height=1, bg="lightgrey")
+        divider.grid(row=1, column=0, sticky="ew", pady=5)
     session.close()
-    return display_text if display_text else "No tasks found."
+#func to move task from to do to done
+def toggle_task_location(task_frame, check_var):
+    task_frame.grid_forget()
+
+    if check_var.get():
+        next_row = todo_frame.grid_info()[1]
+        task_frame.grid(in_=done_frame,row=next_row,column=0,sticky="ew",pady=2)
+    else:
+        next_row = todo_frame.grid_size()[1]
+        task_frame.grid(in_=todo_frame,row=next_row, column=0, sticky="ew",pady=2)
+
+todo_frame = tk.LabelFrame(main_window, text="To Do", padx=10, pady=10)
+todo_frame.grid(row=7,column=0,fill="both", expand=True, padx=10, pady=5)
+
+done_frame = tk.LabelFrame(main_window, text="Done", padx=10, pady=10)
+done_frame.grid(row=7,column=2,fill="both", expand=True, padx=10, pady=5)
+
 # Ask user  to enter a task->str
 #provide input space
 #provide common suggestions
@@ -135,8 +164,8 @@ add_task_button.grid(row=3, column=2)
 tasks_data_string = populating_task_list()
 list_label = tk.Label(main_window, text="TASK LIST: ",pady=10, padx=10)
 list_label.grid(row=6, column=2,columnspan=2)
-tasks_list = tk.Label(main_window, width=60,text=tasks_data_string, justify=tk.LEFT,pady=10, padx=10,anchor="nw")
-tasks_list.grid(row=7, column=0,columnspan=3)
+# tasks_list = tk.Label(main_window, width=60,text=tasks_data_string, justify=tk.LEFT,pady=10, padx=10,anchor="nw")
+# tasks_list.grid(row=7, column=0,columnspan=3)
 
 
 main_window.mainloop()
