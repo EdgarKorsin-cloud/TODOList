@@ -1,5 +1,5 @@
 import tkinter as tk
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, Boolean
 from sqlalchemy.orm import declarative_base, relationship
 from sqlalchemy import Column, Integer, String, Float, ForeignKey, DateTime
 from sqlalchemy.orm import sessionmaker
@@ -9,7 +9,6 @@ from tkinter import messagebox
 #save entry,dates and owner's info
 #Create and save to DB
 #database
-SQLite: 'sqlite:///relative_path.db'
 engine = create_engine('sqlite:///database.db')
 
 Base = declarative_base()
@@ -22,6 +21,7 @@ class Task(Base):
     task_end = Column(DateTime)
     owner_name = Column(String)
     owner_email = Column(String)
+    is_done = Column(Boolean, default=False)
 Base.metadata.create_all(engine)
 
 main_window = tk.Tk()
@@ -66,42 +66,54 @@ def populating_task_list():
     session = Session()
     all_tasks = session.query(Task).all()
     for index,task in enumerate(all_tasks):
-        task_frame = tk.Frame(todo_frame)
-        task_frame.grid(row=index,column=0,sticky="ew", pady=2)
+        task_frame = tk.Frame(main_window)
+        parent_frame = done_frame if task.is_done else todo_frame
+        next_row = parent_frame.grid_size()[1]
+        task_frame.grid(in_=parent_frame, row=next_row, column=0, sticky="ew", pady=2)
         task_frame.columnconfigure(0, weight=1)
         task_text = (
             f"ID: {task.id} | {task.task_description}\n"
             f"Schedule: {task.task_start} to {task.task_end}\n"
             f"Owner: {task.owner_name} ({task.owner_email})"
         )
-        check_var = tk.BooleanVar()
+        check_var = tk.BooleanVar(value=task.is_done)
+
         chk = tk.Checkbutton(
             task_frame,
             text=task_text,
             variable=check_var,
             justify="left",
-            command=lambda tf=task_frame, cv=check_var: toggle_task_location(tf, cv)
+            command=lambda tf=task_frame, cv=check_var, tid=task.id: toggle_task_location(tf, cv, tid)
         )
         chk.grid(sticky="w")
         divider = tk.Frame(task_frame, height=1, bg="lightgrey")
         divider.grid(row=1, column=0, sticky="ew", pady=5)
     session.close()
 #func to move task from to do to done
-def toggle_task_location(task_frame, check_var):
+def toggle_task_location(task_frame, check_var,task_id):
     task_frame.grid_forget()
 
     if check_var.get():
-        next_row = todo_frame.grid_info()[1]
-        task_frame.grid(in_=done_frame,row=next_row,column=0,sticky="ew",pady=2)
+        next_row = done_frame.grid_size()[1]
+        task_frame.grid(in_=done_frame, row=next_row, column=0, sticky="ew", pady=2)
     else:
         next_row = todo_frame.grid_size()[1]
-        task_frame.grid(in_=todo_frame,row=next_row, column=0, sticky="ew",pady=2)
+        task_frame.grid(in_=todo_frame, row=next_row, column=0, sticky="ew", pady=2)
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
+    task_to_update = session.query(Task).filter_by(id=task_id).first()
+    if task_to_update:
+        task_to_update.is_done = check_var.get()
+        session.commit()
+
+    session.close()
 
 todo_frame = tk.LabelFrame(main_window, text="To Do", padx=10, pady=10)
-todo_frame.grid(row=7,column=0,fill="both", expand=True, padx=10, pady=5)
+todo_frame.grid(row=7,column=0, padx=10, pady=5)
 
 done_frame = tk.LabelFrame(main_window, text="Done", padx=10, pady=10)
-done_frame.grid(row=7,column=2,fill="both", expand=True, padx=10, pady=5)
+done_frame.grid(row=7,column=2, padx=10, pady=5)
 
 # Ask user  to enter a task->str
 #provide input space
