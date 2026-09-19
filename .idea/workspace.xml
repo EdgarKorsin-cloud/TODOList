@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4f15877-becd-4bcd-9813-455b54cf00f6" name="Changes" comment="Add buttons's commands to suggestions, Add &quot;Create Task&quot; button, created database">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d4f15877-becd-4bcd-9813-455b54cf00f6" name="Changes" comment="Create fun to save task and info, Fix bug with date str">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,61 +33,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000456191787304" />
-      <entry key="S2" value="1.0821841416038305" />
-      <entry key="S5" value="1.370902277427023" />
-      <entry key="S10" value="1.7024584380498877" />
-      <entry key="S30" value="3.1160970644293498" />
-      <entry key="S60" value="4.425011805137892" />
-      <entry key="M2" value="5.607478851236862" />
-      <entry key="M5" value="9.963174987507466" />
-      <entry key="M10" value="24.72059370279006" />
-      <entry key="M15" value="42.182127896410705" />
-      <entry key="M30" value="90.51965238781658" />
-      <entry key="H1" value="154.88971485596582" />
-      <entry key="H2" value="214.43408828052623" />
-      <entry key="H4" value="256.39666351204573" />
-      <entry key="D1" value="300.11105218531566" />
-      <entry key="W1" value="308.5616957201244" />
+      <entry key="MS100" value="1.0000000000000027" />
+      <entry key="MS500" value="1.001222457479327" />
+      <entry key="S2" value="1.1877552503873667" />
+      <entry key="S5" value="1.6046791045312498" />
+      <entry key="S10" value="2.2771881009589636" />
+      <entry key="S30" value="4.407975424765463" />
+      <entry key="S60" value="6.3489802905577415" />
+      <entry key="M2" value="9.46283493740294" />
+      <entry key="M5" value="19.327974227905223" />
+      <entry key="M10" value="35.81701340634045" />
+      <entry key="M15" value="52.31761766083052" />
+      <entry key="M30" value="100.53768763279112" />
+      <entry key="H1" value="172.84853618768884" />
+      <entry key="H2" value="246.63118401895753" />
+      <entry key="H4" value="301.93267058511634" />
+      <entry key="D1" value="362.0675214750492" />
+      <entry key="W1" value="373.9663520887778" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="1.9065248677675846E-103" />
-      <entry key="S5" value="1.1872562281587306E-41" />
-      <entry key="S10" value="5.092594216849232E-21" />
-      <entry key="S30" value="3.8016380735459047E-7" />
-      <entry key="S60" value="0.0013646034578092526" />
-      <entry key="M2" value="0.09707174547367965" />
-      <entry key="M5" value="1.511582858215617" />
-      <entry key="M10" value="4.201670428285344" />
-      <entry key="M15" value="6.343184110052065" />
-      <entry key="M30" value="10.855246919254117" />
-      <entry key="H1" value="15.492590830962703" />
-      <entry key="H2" value="19.069630195999874" />
-      <entry key="H4" value="21.332375805407104" />
-      <entry key="D1" value="23.523880052649897" />
-      <entry key="W1" value="23.931162189936007" />
+      <entry key="MS100" value="3.212416615695313E-116" />
+      <entry key="MS500" value="7.968312772839985E-24" />
+      <entry key="S2" value="1.680124996427496E-6" />
+      <entry key="S5" value="0.004899333457542929" />
+      <entry key="S10" value="0.07005911958994056" />
+      <entry key="S30" value="0.4521003586109307" />
+      <entry key="S60" value="0.8419181220069359" />
+      <entry key="M2" value="1.2484027612618347" />
+      <entry key="M5" value="1.6844011071696208" />
+      <entry key="M10" value="2.5287575597070675" />
+      <entry key="M15" value="3.827520317209322" />
+      <entry key="M30" value="7.9647365022706405" />
+      <entry key="H1" value="13.514574755119087" />
+      <entry key="H2" value="18.447212813497188" />
+      <entry key="H4" value="21.813071062080848" />
+      <entry key="D1" value="25.23622502090965" />
+      <entry key="W1" value="25.88914201071768" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="4.037596284687644E-7" />
-      <entry key="MS500" value="0.05263083666818985" />
-      <entry key="S2" value="0.5161047352019101" />
-      <entry key="S5" value="1.015222920817902" />
-      <entry key="S10" value="1.4677676164507576" />
-      <entry key="S30" value="2.983331897961175" />
-      <entry key="S60" value="4.337138246031052" />
-      <entry key="M2" value="5.648746787634569" />
-      <entry key="M5" value="11.43457436738207" />
-      <entry key="M10" value="28.88248127819525" />
-      <entry key="M15" value="48.4865359662923" />
-      <entry key="M30" value="101.34133866894979" />
-      <entry key="H1" value="170.35749631527318" />
-      <entry key="H2" value="233.48794304809803" />
-      <entry key="H4" value="277.7200229113909" />
-      <entry key="D1" value="323.6332396715302" />
-      <entry key="W1" value="332.49261095769606" />
+      <entry key="MS100" value="0.25173888751417967" />
+      <entry key="MS500" value="0.7589100948077351" />
+      <entry key="S2" value="0.9600901743583862" />
+      <entry key="S5" value="1.2914211181635644" />
+      <entry key="S10" value="2.054115130941402" />
+      <entry key="S30" value="4.652135413550031" />
+      <entry key="S60" value="7.038984074099214" />
+      <entry key="M2" value="10.604903479317239" />
+      <entry key="M5" value="20.94755822341668" />
+      <entry key="M10" value="38.29883375014884" />
+      <entry key="M15" value="56.10370982501675" />
+      <entry key="M30" value="108.46735427313143" />
+      <entry key="H1" value="186.33590335870107" />
+      <entry key="H2" value="265.0602819866564" />
+      <entry key="H4" value="323.7350804125904" />
+      <entry key="D1" value="387.30168881816604" />
+      <entry key="W1" value="399.8551923499473" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -136,7 +135,7 @@
       <updated>1789577749279</updated>
       <workItem from="1789577750318" duration="242000" />
       <workItem from="1789753928630" duration="2692000" />
-      <workItem from="1789785063750" duration="3097000" />
+      <workItem from="1789785063750" duration="4461000" />
     </task>
     <task id="LOCAL-00001" summary="Create Ui to ask user for task, dates, owner">
       <option name="closed" value="true" />
@@ -162,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1789786133802</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Create fun to save task and info, Fix bug with date str">
+      <option name="closed" value="true" />
+      <created>1789788239415</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1789788239415</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,9 +179,10 @@
     <MESSAGE value="Create Ui to ask user for task, dates, owner" />
     <MESSAGE value="Suggestion can now populate task entry" />
     <MESSAGE value="Add buttons's commands to suggestions, Add &quot;Create Task&quot; button, created database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add buttons's commands to suggestions, Add &quot;Create Task&quot; button, created database" />
+    <MESSAGE value="Create fun to save task and info, Fix bug with date str" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create fun to save task and info, Fix bug with date str" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/todolist$main.coverage" NAME="main Coverage Results" MODIFIED="1789787984020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/todolist$main.coverage" NAME="main Coverage Results" MODIFIED="1789789536750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
