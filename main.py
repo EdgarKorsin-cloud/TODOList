@@ -2,8 +2,12 @@ import tkinter as tk
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, relationship
 from sqlalchemy import Column, Integer, String, Float, ForeignKey, DateTime
+from sqlalchemy.orm import sessionmaker
 from datetime import datetime
+from tkinter import messagebox
 
+#save entry,dates and owner's info
+#Create and save to DB
 #database
 SQLite: 'sqlite:///relative_path.db'
 engine = create_engine('sqlite:///database.db')
@@ -29,6 +33,31 @@ def adding_suggestion(button):
     task_entry.delete(0, tk.END)
     task_entry.insert(0, button_text)
     pass
+#func to save to db
+def adding_task(task,start,due,owner,email):
+    try:
+        start_date_obj = datetime.strptime(start,"%m/%d/%Y")
+        due_date_obj = datetime.strptime(due,"%m/%d/%Y")
+    except:
+        messagebox.showerror("Error", "Please use the correct date format: YYYY-MM-DD")
+        return
+
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    new_task = Task(task_description=task,
+                    task_start=start_date_obj,
+                    task_end=due_date_obj,
+                    owner_name=owner,
+                    owner_email=email)
+    session.add(new_task)
+    session.commit()
+
+    task_entry.delete(0, tk.END)
+    start_date_entry.delete(0, tk.END)
+    due_date_entry.delete(0, tk.END)
+    owner_entry.delete(0, tk.END)
+    owner_email_entry.delete(0, tk.END)
+    messagebox.showinfo(f"Task added to list. Remember its due {due}")
 # Ask user  to enter a task->str
 #provide input space
 #provide common suggestions
@@ -38,10 +67,10 @@ task_label = tk.Label(main_window, text="You can enter your task here: ",pady=10
 task_label.grid(row=0, column=0)
 task_entry = tk.Entry(main_window, width=40)
 task_entry.grid(row=0, column=1,columnspan=2)
-star_date_label = tk.Label(main_window, text="Star Date(MM/DD/YYYY): ", pady=10, padx=10)
-star_date_label.grid(row=0, column=3)
-star_date_entry = tk.Entry(main_window)
-star_date_entry.grid(row=0, column=4)
+start_date_label = tk.Label(main_window, text="Star Date(MM/DD/YYYY): ", pady=10, padx=10)
+start_date_label.grid(row=0, column=3)
+start_date_entry = tk.Entry(main_window)
+start_date_entry.grid(row=0, column=4)
 due_date_label = tk.Label(main_window, text="Due Date(MM/DD/YYYY): ", pady=10, padx=10)
 due_date_label.grid(row=1, column=3)
 due_date_entry = tk.Entry(main_window)
@@ -73,7 +102,12 @@ suggestion_5_button = tk.Button(text="Finish \"the book\" ",padx=10,pady=10,comm
 button_5_text = suggestion_5_button.cget("text")
 suggestion_5_button.grid(row=5, column=5)
 
-add_task_button = tk.Button(text="Create task", padx=10,pady=10)
+add_task_button = tk.Button(text="Create task",
+                            padx=10,pady=10, command=lambda:adding_task(task=task_entry.get(),
+                                                                        start=start_date_entry.get(),
+                                                                        due=due_date_entry.get(),
+                                                                        owner=owner_entry.get(),
+                                                                        email=owner_email_entry.get()))
 add_task_button.grid(row=3, column=2)
 
 main_window.mainloop()
