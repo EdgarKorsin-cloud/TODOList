@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4f15877-becd-4bcd-9813-455b54cf00f6" name="Changes" comment="Create fun to save task and info, Fix bug with date str">
+    <list default="true" id="d4f15877-becd-4bcd-9813-455b54cf00f6" name="Changes" comment="Create task list and checkbox">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,61 +33,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000000000027" />
-      <entry key="MS500" value="1.001222457479327" />
-      <entry key="S2" value="1.1877552503873667" />
-      <entry key="S5" value="1.6046791045312498" />
-      <entry key="S10" value="2.2771881009589636" />
-      <entry key="S30" value="4.407975424765463" />
-      <entry key="S60" value="6.3489802905577415" />
-      <entry key="M2" value="9.46283493740294" />
-      <entry key="M5" value="19.327974227905223" />
-      <entry key="M10" value="35.81701340634045" />
-      <entry key="M15" value="52.31761766083052" />
-      <entry key="M30" value="100.53768763279112" />
-      <entry key="H1" value="172.84853618768884" />
-      <entry key="H2" value="246.63118401895753" />
-      <entry key="H4" value="301.93267058511634" />
-      <entry key="D1" value="362.0675214750492" />
-      <entry key="W1" value="373.9663520887778" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0000000000049132" />
+      <entry key="S60" value="1.0000058278097081" />
+      <entry key="M2" value="1.0088940120816154" />
+      <entry key="M5" value="2.2321928411492595" />
+      <entry key="M10" value="10.123220905964766" />
+      <entry key="M15" value="22.00054056090413" />
+      <entry key="M30" value="64.94847593813134" />
+      <entry key="H1" value="144.4670848883964" />
+      <entry key="H2" value="241.03329554218513" />
+      <entry key="H4" value="322.13894550306765" />
+      <entry key="D1" value="417.8065353057324" />
+      <entry key="W1" value="437.59140321563814" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="3.212416615695313E-116" />
-      <entry key="MS500" value="7.968312772839985E-24" />
-      <entry key="S2" value="1.680124996427496E-6" />
-      <entry key="S5" value="0.004899333457542929" />
-      <entry key="S10" value="0.07005911958994056" />
-      <entry key="S30" value="0.4521003586109307" />
-      <entry key="S60" value="0.8419181220069359" />
-      <entry key="M2" value="1.2484027612618347" />
-      <entry key="M5" value="1.6844011071696208" />
-      <entry key="M10" value="2.5287575597070675" />
-      <entry key="M15" value="3.827520317209322" />
-      <entry key="M30" value="7.9647365022706405" />
-      <entry key="H1" value="13.514574755119087" />
-      <entry key="H2" value="18.447212813497188" />
-      <entry key="H4" value="21.813071062080848" />
-      <entry key="D1" value="25.23622502090965" />
-      <entry key="W1" value="25.88914201071768" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.3430458198565406E-132" />
+      <entry key="S5" value="1.7833489748942805E-53" />
+      <entry key="S10" value="4.223409935514482E-27" />
+      <entry key="S30" value="1.6923251831262114E-9" />
+      <entry key="S60" value="4.8942870868843564E-5" />
+      <entry key="M2" value="0.00964491207530227" />
+      <entry key="M5" value="0.3966343428087939" />
+      <entry key="M10" value="2.188872921930488" />
+      <entry key="M15" value="4.340881697851865" />
+      <entry key="M30" value="10.197497691769122" />
+      <entry key="H1" value="18.385311520349713" />
+      <entry key="H2" value="26.594402595095094" />
+      <entry key="H4" value="32.74228760627897" />
+      <entry key="D1" value="39.44402746583417" />
+      <entry key="W1" value="40.77280107329447" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.25173888751417967" />
-      <entry key="MS500" value="0.7589100948077351" />
-      <entry key="S2" value="0.9600901743583862" />
-      <entry key="S5" value="1.2914211181635644" />
-      <entry key="S10" value="2.054115130941402" />
-      <entry key="S30" value="4.652135413550031" />
-      <entry key="S60" value="7.038984074099214" />
-      <entry key="M2" value="10.604903479317239" />
-      <entry key="M5" value="20.94755822341668" />
-      <entry key="M10" value="38.29883375014884" />
-      <entry key="M15" value="56.10370982501675" />
-      <entry key="M30" value="108.46735427313143" />
-      <entry key="H1" value="186.33590335870107" />
-      <entry key="H2" value="265.0602819866564" />
-      <entry key="H4" value="323.7350804125904" />
-      <entry key="D1" value="387.30168881816604" />
-      <entry key="W1" value="399.8551923499473" />
+      <entry key="MS100" value="0.8827029962906549" />
+      <entry key="MS500" value="0.9753554615276419" />
+      <entry key="S2" value="0.9937810933225548" />
+      <entry key="S5" value="0.9975077808975293" />
+      <entry key="S10" value="0.9987531130852756" />
+      <entry key="S30" value="0.9995841998118381" />
+      <entry key="S60" value="0.9998460787992867" />
+      <entry key="M2" value="1.0183245219535533" />
+      <entry key="M5" value="2.6251651639417943" />
+      <entry key="M10" value="12.299840715556938" />
+      <entry key="M15" value="26.323679074689455" />
+      <entry key="M30" value="75.12175978008425" />
+      <entry key="H1" value="162.82797712869365" />
+      <entry key="H2" value="267.60877778069306" />
+      <entry key="H4" value="354.8691299300097" />
+      <entry key="D1" value="457.24804776636427" />
+      <entry key="W1" value="478.36383061933975" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -135,7 +135,7 @@
       <updated>1789577749279</updated>
       <workItem from="1789577750318" duration="242000" />
       <workItem from="1789753928630" duration="2692000" />
-      <workItem from="1789785063750" duration="4461000" />
+      <workItem from="1789785063750" duration="7422000" />
     </task>
     <task id="LOCAL-00001" summary="Create Ui to ask user for task, dates, owner">
       <option name="closed" value="true" />
@@ -169,7 +169,23 @@
       <option name="project" value="LOCAL" />
       <updated>1789788239415</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Create tasks lists and function to update it">
+      <option name="closed" value="true" />
+      <created>1789789644263</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1789789644263</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Create task list and checkbox">
+      <option name="closed" value="true" />
+      <created>1789791196391</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1789791196391</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,9 +196,11 @@
     <MESSAGE value="Suggestion can now populate task entry" />
     <MESSAGE value="Add buttons's commands to suggestions, Add &quot;Create Task&quot; button, created database" />
     <MESSAGE value="Create fun to save task and info, Fix bug with date str" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create fun to save task and info, Fix bug with date str" />
+    <MESSAGE value="Create tasks lists and function to update it" />
+    <MESSAGE value="Create task list and checkbox" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create task list and checkbox" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/todolist$main.coverage" NAME="main Coverage Results" MODIFIED="1789789536750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/todolist$main.coverage" NAME="main Coverage Results" MODIFIED="1789792521639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
