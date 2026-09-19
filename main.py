@@ -1,5 +1,24 @@
 import tkinter as tk
-from textwrap import fill
+from sqlalchemy import create_engine
+from sqlalchemy.orm import declarative_base, relationship
+from sqlalchemy import Column, Integer, String, Float, ForeignKey, DateTime
+from datetime import datetime
+
+#database
+SQLite: 'sqlite:///relative_path.db'
+engine = create_engine('sqlite:///database.db')
+
+Base = declarative_base()
+class Task(Base):
+    __tablename__ = 'tasks'
+
+    id = Column(Integer, primary_key=True)
+    task_description = Column(String)
+    task_start = Column(DateTime)
+    task_end = Column(DateTime)
+    owner_name = Column(String)
+    owner_email = Column(String)
+Base.metadata.create_all(engine)
 
 main_window = tk.Tk()
 main_window.title("TODO List")
@@ -38,20 +57,23 @@ owner_email_entry = tk.Entry(main_window)
 owner_email_entry.grid(row=2, column=4)
 suggestions_label = tk.Label(text="Need an idea? Here are some suggestions:", pady=10, padx=10)
 suggestions_label.grid(row=0, column=5)
-suggestion_1_button = tk.Button(text="Exercise for 15 minutes",padx=10,pady=10,command=lambda: adding_suggestion(button_1_text))
+suggestion_1_button = tk.Button(text="Exercise for 15 minutes",padx=10,pady=10,command=lambda: adding_suggestion(button_1_text), width=20)
 button_1_text = suggestion_1_button.cget("text")
 suggestion_1_button.grid(row=1, column=5)
-suggestion_2_button = tk.Button(text="Clean the bathroom(s)",padx=10,pady=10,command=lambda: adding_suggestion(button_2_text))
+suggestion_2_button = tk.Button(text="Clean the bathroom(s)",padx=10,pady=10,command=lambda: adding_suggestion(button_2_text), width=20)
 button_2_text = suggestion_2_button.cget("text")
 suggestion_2_button.grid(row=2, column=5)
-suggestion_3_button = tk.Button(text="Clean the kitchen",padx=10,pady=10, command=lambda: adding_suggestion(button_3_text))
+suggestion_3_button = tk.Button(text="Clean the kitchen",padx=10,pady=10, command=lambda: adding_suggestion(button_3_text), width=20)
 button_3_text = suggestion_3_button.cget("text")
 suggestion_3_button.grid(row=3, column=5)
-suggestion_4_button = tk.Button(text="Clean the bedroom",padx=10,pady=10,command=lambda: adding_suggestion(button_4_text))
+suggestion_4_button = tk.Button(text="Clean the bedroom",padx=10,pady=10,command=lambda: adding_suggestion(button_4_text), width=20)
 button_4_text = suggestion_4_button.cget("text")
 suggestion_4_button.grid(row=4, column=5)
-suggestion_5_button = tk.Button(text="Finish \"the book\" ",padx=10,pady=10,command=lambda: adding_suggestion(button_5_text))
+suggestion_5_button = tk.Button(text="Finish \"the book\" ",padx=10,pady=10,command=lambda: adding_suggestion(button_5_text), width=20)
 button_5_text = suggestion_5_button.cget("text")
 suggestion_5_button.grid(row=5, column=5)
+
+add_task_button = tk.Button(text="Create task", padx=10,pady=10)
+add_task_button.grid(row=3, column=2)
 
 main_window.mainloop()

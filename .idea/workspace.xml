@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4f15877-becd-4bcd-9813-455b54cf00f6" name="Changes" comment="Create Ui to ask user for task, dates, owner">
+    <list default="true" id="d4f15877-becd-4bcd-9813-455b54cf00f6" name="Changes" comment="Suggestion can now populate task entry">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -16,6 +16,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "EdgarKorsin-cloud"
+  }
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/EdgarKorsin-cloud/TODOList&quot;,
@@ -28,61 +34,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="7.221245001738263E-80" />
-      <entry key="S2" value="1.6392795523691758E-20" />
-      <entry key="S5" value="1.2191326534207804E-8" />
-      <entry key="S10" value="1.1269796766928102E-4" />
-      <entry key="S30" value="0.06204426617394127" />
-      <entry key="S60" value="0.44265484043579745" />
-      <entry key="M2" value="2.7627450149087034" />
-      <entry key="M5" value="16.19458813878137" />
-      <entry key="M10" value="35.67989148546194" />
-      <entry key="M15" value="51.92149784394287" />
-      <entry key="M30" value="86.77792923489366" />
-      <entry key="H1" value="120.41639258537155" />
-      <entry key="H2" value="144.64046292358213" />
-      <entry key="H4" value="159.29689301148707" />
-      <entry key="D1" value="173.06121934411357" />
-      <entry key="W1" value="175.5762006743595" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0003762276174302" />
+      <entry key="S2" value="1.2042082974659627" />
+      <entry key="S5" value="1.846886896545099" />
+      <entry key="S10" value="2.7188262857845107" />
+      <entry key="S30" value="4.76385351409503" />
+      <entry key="S60" value="6.585197280303014" />
+      <entry key="M2" value="10.288498287120479" />
+      <entry key="M5" value="19.359129872182695" />
+      <entry key="M10" value="32.32719354196496" />
+      <entry key="M15" value="45.983981479788135" />
+      <entry key="M30" value="82.46254354071003" />
+      <entry key="H1" value="125.40542081250904" />
+      <entry key="H2" value="160.3483878439345" />
+      <entry key="H4" value="182.96324424150623" />
+      <entry key="D1" value="205.14864102500192" />
+      <entry key="W1" value="209.29794478058614" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000000000007" />
-      <entry key="S2" value="1.0001660033527204" />
-      <entry key="S5" value="1.0307643145190573" />
-      <entry key="S10" value="1.1755861933813296" />
-      <entry key="S30" value="1.6259940190586732" />
-      <entry key="S60" value="2.087833777345659" />
-      <entry key="M2" value="2.766017370563418" />
-      <entry key="M5" value="4.277806362821082" />
-      <entry key="M10" value="5.946788810823789" />
-      <entry key="M15" value="6.905617377611395" />
-      <entry key="M30" value="8.208895524978347" />
-      <entry key="H1" value="9.032340045679424" />
-      <entry key="H2" value="9.496521335288806" />
-      <entry key="H4" value="9.74312929800596" />
-      <entry key="D1" value="9.956456098945875" />
-      <entry key="W1" value="9.993761254236892" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="1.9459871450822397E-188" />
+      <entry key="S2" value="1.2534655319297511E-47" />
+      <entry key="S5" value="2.248413244396044E-19" />
+      <entry key="S10" value="6.470833186415853E-10" />
+      <entry key="S30" value="0.001395887702933095" />
+      <entry key="S60" value="0.05800029717620754" />
+      <entry key="M2" value="0.40074637208014474" />
+      <entry key="M5" value="1.5218300104188225" />
+      <entry key="M10" value="3.27181475317208" />
+      <entry key="M15" value="4.764741601492754" />
+      <entry key="M30" value="7.539443088807869" />
+      <entry key="H1" value="9.796729320172043" />
+      <entry key="H2" value="11.256413299818037" />
+      <entry key="H4" value="12.089210261711365" />
+      <entry key="D1" value="12.84245809187953" />
+      <entry key="W1" value="12.977348866898051" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.020757716969384E-5" />
-      <entry key="MS500" value="0.10041174959462944" />
-      <entry key="S2" value="0.5630420847116353" />
-      <entry key="S5" value="0.8219236296092778" />
-      <entry key="S10" value="1.056846855597027" />
-      <entry key="S30" value="1.636044079895219" />
-      <entry key="S60" value="2.4931439646747844" />
-      <entry key="M2" value="5.492425240873626" />
-      <entry key="M5" value="20.43348545679822" />
-      <entry key="M10" value="41.592694113887646" />
-      <entry key="M15" value="58.79760645360824" />
-      <entry key="M30" value="94.9657144401933" />
-      <entry key="H1" value="129.43539861562257" />
-      <entry key="H2" value="154.1293599591563" />
-      <entry key="H4" value="169.03592636433174" />
-      <entry key="D1" value="183.01694888408824" />
-      <entry key="W1" value="185.56985699532757" />
+      <entry key="MS100" value="1.6262719951018466E-6" />
+      <entry key="MS500" value="0.0695731119068943" />
+      <entry key="S2" value="0.6396061968428111" />
+      <entry key="S5" value="1.4782324835993141" />
+      <entry key="S10" value="2.4695294853196987" />
+      <entry key="S30" value="4.645554876801828" />
+      <entry key="S60" value="6.566179949323224" />
+      <entry key="M2" value="10.632033181313044" />
+      <entry key="M5" value="20.84049878283862" />
+      <entry key="M10" value="35.56690344477193" />
+      <entry key="M15" value="50.72000807539317" />
+      <entry key="M30" value="89.97936372536827" />
+      <entry key="H1" value="135.18659027866352" />
+      <entry key="H2" value="171.5954085458498" />
+      <entry key="H4" value="195.04725362913265" />
+      <entry key="D1" value="217.99015145214202" />
+      <entry key="W1" value="222.27515612870775" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -130,6 +136,7 @@
       <updated>1789577749279</updated>
       <workItem from="1789577750318" duration="242000" />
       <workItem from="1789753928630" duration="2692000" />
+      <workItem from="1789785063750" duration="920000" />
     </task>
     <task id="LOCAL-00001" summary="Create Ui to ask user for task, dates, owner">
       <option name="closed" value="true" />
@@ -139,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1789756966993</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Suggestion can now populate task entry">
+      <option name="closed" value="true" />
+      <created>1789784862543</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1789784862543</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,9 +162,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create Ui to ask user for task, dates, owner" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Ui to ask user for task, dates, owner" />
+    <MESSAGE value="Suggestion can now populate task entry" />
+    <option name="LAST_COMMIT_MESSAGE" value="Suggestion can now populate task entry" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/todolist$main.coverage" NAME="main Coverage Results" MODIFIED="1789783942941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/todolist$main.coverage" NAME="main Coverage Results" MODIFIED="1789785371169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
